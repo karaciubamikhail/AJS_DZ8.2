@@ -1,6 +1,8 @@
-// TODO: write your code here
-import sum from './basic';
-
-console.log('worked');
-
-console.log(sum([1, 2]));
+export default class ErrorRepository {
+    constructor() {
+        this.repository = new Map();
+    }
+    translate(code) {
+        return this.repository.get(code) ? this.repository.get(code) : 'Unknown error';
+    }
+}
